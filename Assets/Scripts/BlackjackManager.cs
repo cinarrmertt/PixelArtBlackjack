@@ -70,7 +70,7 @@ public class BlackjackManager : MonoBehaviour
         StartCoroutine(DealerTurn());
     }
     
-    IEnumerator DealerTurn() //kurpiyer yapay zeka
+    IEnumerator DealerTurn() 
     {
         if (dealerHiddenCardDisplay != null)
         {
@@ -79,13 +79,21 @@ public class BlackjackManager : MonoBehaviour
         
         NotifyUI(false); 
         yield return new WaitForSeconds(1f);
-
+        
         while (CalculateScore(dealerHandValues) < 17)
         {
             yield return StartCoroutine(DealSingleCard(dealerHandPos, true, false));
+            
             if(CalculateScore(dealerHandValues) > 21) break; 
+            
+            if (dealerHandValues.Count >= 5)
+            {
+                yield return new WaitForSeconds(0.5f);
+                uiManager.GameResult(false, "Krupiye 5 Kart Yaptı! KAYBETTİN.");
+                yield break; 
+            }
         }
-
+        
         DetermineWinner();
     }
     
@@ -172,11 +180,21 @@ public class BlackjackManager : MonoBehaviour
         if (isFaceUp) cardScript.FlipCard();
 
         NotifyUI(isPlayer); 
-
-        if(isPlayer && CalculateScore(playerHandValues) > 21)
+        
+        if(isPlayer)
         {
-            yield return new WaitForSeconds(0.5f); 
-            uiManager.GameResult(false, "BUST! (21'i Geçtin)"); 
+            int currentScore = CalculateScore(playerHandValues);
+
+            if (currentScore > 21)
+            {
+                yield return new WaitForSeconds(0.5f); 
+                uiManager.GameResult(false, "BUST! (21'i Geçtin)"); 
+            }
+            else if (playerHandValues.Count >= 5)
+            {
+                yield return new WaitForSeconds(0.5f);
+                uiManager.GameResult(true, "5 KART CHARLIE! KAZANDIN!");
+            }
         }
         
         yield return new WaitForSeconds(0.2f); 
@@ -186,24 +204,26 @@ public class BlackjackManager : MonoBehaviour
     {
         if (isPlayer)
         {
-            int score = CalculateScore(playerHandValues);
-            uiManager.UpdateScoreUI(true, score);
+            string scoreStr = GetScoreString(playerHandValues);
+            uiManager.UpdateScoreUI(true, scoreStr);
         }
         else
         {
-            bool hiddenCardIsClosed = (dealerHiddenCardDisplay != null && dealerHiddenCardDisplay.render.sprite == 
-                cardBackSprite);
+            bool hiddenCardIsClosed = (dealerHiddenCardDisplay != null && dealerHiddenCardDisplay.render.sprite == cardBackSprite);
 
             if (dealerHandValues.Count > 1 && hiddenCardIsClosed)
             {
-                 int visibleScore = dealerHandValues[0];
-                 if(visibleScore == 11) visibleScore = 11;
-                 uiManager.UpdateScoreUI(false, visibleScore);
+                int firstCardVal = dealerHandValues[0];
+                string dealerStr = firstCardVal.ToString();
+                 
+                if(firstCardVal == 11) dealerStr = "1/11";
+                 
+                uiManager.UpdateScoreUI(false, dealerStr);
             }
             else
             {
-                int score = CalculateScore(dealerHandValues);
-                uiManager.UpdateScoreUI(false, score);
+                string scoreStr = GetScoreString(dealerHandValues);
+                uiManager.UpdateScoreUI(false, scoreStr);
             }
         }
     }
@@ -235,5 +255,27 @@ public class BlackjackManager : MonoBehaviour
             deckOfCards[i] = deckOfCards[randomIndex];
             deckOfCards[randomIndex] = temp;
         }
+    }
+    
+    string GetScoreString(List<int> hand)
+    {
+        int total = 0;
+        int aceCount = 0;
+
+        foreach (int cardVal in hand)
+        {
+            total += cardVal;
+            if (cardVal == 11) aceCount++;
+        }
+
+        if (aceCount == 0 || total > 21)
+        {
+            return CalculateScore(hand).ToString();
+        }
+
+        int softScore = total;      
+        int hardScore = total - 10; 
+
+        return hardScore + "/" + softScore;
     }
 }

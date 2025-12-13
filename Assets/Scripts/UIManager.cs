@@ -139,10 +139,12 @@ public class UIManager : MonoBehaviour
         blackjackManager.PlayerStand();
     }
 
-    public void UpdateScoreUI(bool isPlayer, int score)
+    public void UpdateScoreUI(bool isPlayer, string scoreText)
     {
-        if (isPlayer) playerScoreText.text = score.ToString();
-        else dealerScoreText.text = score.ToString();
+        if (isPlayer)
+            playerScoreText.text = scoreText;
+        else
+            dealerScoreText.text = scoreText;
     }
     
     public void GameResult(bool playerWins, string message, bool isPush = false)
@@ -203,8 +205,18 @@ public class UIManager : MonoBehaviour
 
     public void PlayButton()
     {
+        StartCoroutine(PlayWithDelay());
+    }
+    
+    IEnumerator PlayWithDelay()
+    {
+        animator.SetTrigger("PlayClick");
+        
+        yield return new WaitForSeconds(0.4f);
+        
         SceneManager.LoadScene("GameScene");
     }
+    
     public void MenuButton()
     {
         SceneManager.LoadScene("MainMenu");

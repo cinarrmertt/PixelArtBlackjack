@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1958676783162264248, guid: 2a720702a5ce9bc4a8c95cca02229feb, type: 3}
+  m_Sprite: {fileID: 8591256504908726430, guid: 09e92b83cba0dd247bc87a5c108aa6db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -560,10 +560,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb1f02d64beed94fb45f0d4e623f198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  blackjackManager: {fileID: 0}
   animator: {fileID: 687370183}
-  betAmount: 0
+  walletText: {fileID: 0}
   betAmountText: {fileID: 0}
+  betChipsPanel: {fileID: 0}
+  dealButton: {fileID: 0}
+  clearButtonObj: {fileID: 0}
   maxBetError: {fileID: 0}
+  zeroBetWarning: {fileID: 0}
+  notEnoughMoneyWarning: {fileID: 0}
+  playerScoreText: {fileID: 0}
+  dealerScoreText: {fileID: 0}
+  actionButtonsPanel: {fileID: 0}
+  resultText: {fileID: 0}
 --- !u!4 &1626843626
 Transform:
   m_ObjectHideFlags: 0
