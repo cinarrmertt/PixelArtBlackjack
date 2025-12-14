@@ -31,4 +31,18 @@ public class MainMenuManager : MonoBehaviour
 
         SceneManager.LoadScene("GameScene");
     }
+    
+    public void QuitButton()
+    {
+        if (buttonSound != null) buttonSound.Play();
+
+        Debug.Log("Oyundan Çıkılıyor..."); 
+        
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+            // Eğer oyun derlenmişse (.exe ise) uygulamayı kapatır
+            Application.Quit();
+    #endif
+    }
 }
