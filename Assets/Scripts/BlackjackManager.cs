@@ -22,6 +22,9 @@ public class BlackjackManager : MonoBehaviour
     public Transform dealerHandPos;    
     public Sprite cardBackSprite;      
 
+    [Header("Audio (SES)")]
+    public AudioSource cardDealSound;
+
     [Header("Decks of Cards")]
     public List<CardData> deckOfCards; 
     
@@ -79,7 +82,7 @@ public class BlackjackManager : MonoBehaviour
         
         NotifyUI(false); 
         yield return new WaitForSeconds(1f);
-        
+
         while (CalculateScore(dealerHandValues) < 17)
         {
             yield return StartCoroutine(DealSingleCard(dealerHandPos, true, false));
@@ -93,7 +96,7 @@ public class BlackjackManager : MonoBehaviour
                 yield break; 
             }
         }
-        
+
         DetermineWinner();
     }
     
@@ -148,6 +151,11 @@ public class BlackjackManager : MonoBehaviour
 
     IEnumerator DealSingleCard(Transform handPos, bool isFaceUp, bool isPlayer)
     {
+        if (cardDealSound != null)
+        {
+            cardDealSound.PlayOneShot(cardDealSound.clip);
+        }
+
         GameObject newCardObj = Instantiate(cardPrefab, deckPosition.position, Quaternion.identity);
         CardDisplay cardScript = newCardObj.GetComponent<CardDisplay>();
         
@@ -199,7 +207,7 @@ public class BlackjackManager : MonoBehaviour
         
         yield return new WaitForSeconds(0.2f); 
     }
-
+    
     void NotifyUI(bool isPlayer)
     {
         if (isPlayer)

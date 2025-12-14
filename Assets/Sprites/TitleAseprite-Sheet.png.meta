@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: 5fbe21e4ed239f64993b466a51d16668
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8051169548060802322
+    second: TitleAseprite-Sheet_0
+  - first:
+      213: 2808946053602917725
+    second: TitleAseprite-Sheet_1
+  - first:
+      213: -6989556902275381403
+    second: TitleAseprite-Sheet_2
+  - first:
+      213: -8841015754464613289
+    second: TitleAseprite-Sheet_3
+  - first:
+      213: -2316091127184769629
+    second: TitleAseprite-Sheet_4
+  - first:
+      213: -3294400837861137636
+    second: TitleAseprite-Sheet_5
+  - first:
+      213: 455611112386773555
+    second: TitleAseprite-Sheet_6
+  - first:
+      213: 6941388927624583497
+    second: TitleAseprite-Sheet_7
+  - first:
+      213: -7273283671606804483
+    second: TitleAseprite-Sheet_8
+  - first:
+      213: -7771409836844855847
+    second: TitleAseprite-Sheet_9
+  - first:
+      213: 3776892830630913451
+    second: TitleAseprite-Sheet_10
+  - first:
+      213: 9072945886148534074
+    second: TitleAseprite-Sheet_11
+  - first:
+      213: 6995080831809060448
+    second: TitleAseprite-Sheet_12
+  - first:
+      213: 1488808424310027622
+    second: TitleAseprite-Sheet_13
+  - first:
+      213: 1620858987480391711
+    second: TitleAseprite-Sheet_14
+  - first:
+      213: -6924409429306411053
+    second: TitleAseprite-Sheet_15
+  - first:
+      213: 3738850747691771333
+    second: TitleAseprite-Sheet_16
+  - first:
+      213: 369760861751304327
+    second: TitleAseprite-Sheet_17
+  - first:
+      213: -2411927610481043931
+    second: TitleAseprite-Sheet_18
+  - first:
+      213: -5617760191870309818
+    second: TitleAseprite-Sheet_19
+  - first:
+      213: -4004260097129457815
+    second: TitleAseprite-Sheet_20
+  - first:
+      213: 1073743749368012618
+    second: TitleAseprite-Sheet_21
+  - first:
+      213: -2927065249222016286
+    second: TitleAseprite-Sheet_22
+  - first:
+      213: -3898501730409716787
+    second: TitleAseprite-Sheet_23
+  - first:
+      213: 6707494278015952146
+    second: TitleAseprite-Sheet_24
+  - first:
+      213: -6997367113389789170
+    second: TitleAseprite-Sheet_25
+  - first:
+      213: -8197650989046775566
+    second: TitleAseprite-Sheet_26
+  - first:
+      213: -3112527337977568988
+    second: TitleAseprite-Sheet_27
+  - first:
+      213: -6471460167641828928
+    second: TitleAseprite-Sheet_28
+  - first:
+      213: -9036937299516926189
+    second: TitleAseprite-Sheet_29
+  - first:
+      213: 1669604561777598687
+    second: TitleAseprite-Sheet_30
+  - first:
+      213: 6211436757601860466
+    second: TitleAseprite-Sheet_31
+  - first:
+      213: -3858463873632238745
+    second: TitleAseprite-Sheet_32
+  - first:
+      213: -6721960970321822707
+    second: TitleAseprite-Sheet_33
+  - first:
+      213: 1185950398742340042
+    second: TitleAseprite-Sheet_34
+  - first:
+      213: -369193595709134709
+    second: TitleAseprite-Sheet_35
+  - first:
+      213: -6911916297451253488
+    second: TitleAseprite-Sheet_36
+  - first:
+      213: 6852184789697474912
+    second: TitleAseprite-Sheet_37
+  - first:
+      213: -7057329847702427028
+    second: TitleAseprite-Sheet_38
+  - first:
+      213: 3936212656471536026
+    second: TitleAseprite-Sheet_39
+  - first:
+      213: 5473635043246885339
+    second: TitleAseprite-Sheet_40
+  - first:
+      213: -6000069896810420613
+    second: TitleAseprite-Sheet_41
+  - first:
+      213: 8134292291568631486
+    second: TitleAseprite-Sheet_42
+  - first:
+      213: -4581041398550087191
+    second: TitleAseprite-Sheet_43
+  - first:
+      213: 7977153054755012940
+    second: TitleAseprite-Sheet_44
+  - first:
+      213: 2392214488943882013
+    second: TitleAseprite-Sheet_45
+  - first:
+      213: -4975469598078278423
+    second: TitleAseprite-Sheet_46
+  - first:
+      213: -7688659383127853725
+    second: TitleAseprite-Sheet_47
+  - first:
+      213: -5801710328448635292
+    second: TitleAseprite-Sheet_48
+  - first:
+      213: -6057617514857905549
+    second: TitleAseprite-Sheet_49
+  - first:
+      213: -5339308935722198960
+    second: TitleAseprite-Sheet_50
+  - first:
+      213: 4170392749703841305
+    second: TitleAseprite-Sheet_51
+  - first:
+      213: -4791626807281962412
+    second: TitleAseprite-Sheet_52
+  - first:
+      213: 4234641700252255950
+    second: TitleAseprite-Sheet_53
+  - first:
+      213: -3606114085444162235
+    second: TitleAseprite-Sheet_54
+  - first:
+      213: -7680349884837360868
+    second: TitleAseprite-Sheet_55
+  - first:
+      213: 3661322883606979675
+    second: TitleAseprite-Sheet_56
+  - first:
+      213: 660215270415013890
+    second: TitleAseprite-Sheet_57
+  - first:
+      213: -5122890397791292549
+    second: TitleAseprite-Sheet_58
+  - first:
+      213: 1554080187659160915
+    second: TitleAseprite-Sheet_59
+  - first:
+      213: 1270503937272533593
+    second: TitleAseprite-Sheet_60
+  - first:
+      213: -2310241952537071085
+    second: TitleAseprite-Sheet_61
+  - first:
+      213: -8333606367826220964
+    second: TitleAseprite-Sheet_62
+  - first:
+      213: -256533751861824579
+    second: TitleAseprite-Sheet_63
+  - first:
+      213: -1743967581967631940
+    second: TitleAseprite-Sheet_64
+  - first:
+      213: 8047407651104257811
+    second: TitleAseprite-Sheet_65
+  - first:
+      213: -1759999649034756431
+    second: TitleAseprite-Sheet_66
+  - first:
+      213: 8209885571356572213
+    second: TitleAseprite-Sheet_67
+  - first:
+      213: -4995660500669187909
+    second: TitleAseprite-Sheet_68
+  - first:
+      213: 6148654141860980624
+    second: TitleAseprite-Sheet_69
+  - first:
+      213: -8613181875773321292
+    second: TitleAseprite-Sheet_70
+  - first:
+      213: -8580421085615579462
+    second: TitleAseprite-Sheet_71
+  - first:
+      213: -8694877123664825833
+    second: TitleAseprite-Sheet_72
+  - first:
+      213: 5535386225814074475
+    second: TitleAseprite-Sheet_73
+  - first:
+      213: 7477445151537920087
+    second: TitleAseprite-Sheet_74
+  - first:
+      213: -7110560748602873936
+    second: TitleAseprite-Sheet_75
+  - first:
+      213: 3244616635005448451
+    second: TitleAseprite-Sheet_76
+  - first:
+      213: 7116426783251779175
+    second: TitleAseprite-Sheet_77
+  - first:
+      213: -8301578506911572536
+    second: TitleAseprite-Sheet_78
+  - first:
+      213: -4132722687127863650
+    second: TitleAseprite-Sheet_79
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TitleAseprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d3b9a0c008bbf60800000000000000
+      internalID: 8051169548060802322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleAseprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5dbc36ad816bf620800000000000000
+      internalID: 2808946053602917725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleAseprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5670f76970b100f90800000000000000
+      internalID: -6989556902275381403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleAseprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c218553076e4580800000000000000
+      internalID: -8841015754464613289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleAseprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3adb7b814679bdfd0800000000000000
+      internalID: -2316091127184769629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f677b8e38831fe3439c07fd991b77ff1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":640.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      TitleAseprite-Sheet_0: 8051169548060802322
+      TitleAseprite-Sheet_1: 2808946053602917725
+      TitleAseprite-Sheet_2: -6989556902275381403
+      TitleAseprite-Sheet_3: -8841015754464613289
+      TitleAseprite-Sheet_4: -2316091127184769629
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

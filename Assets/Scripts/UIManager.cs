@@ -6,33 +6,34 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Referances")]
+    [Header("Yönetici Bağlantıları")]
     public BlackjackManager blackjackManager; 
-    public Animator animator; 
 
-    [Header("Wallet UI")]
+    [Header("Ses Ayarları (GÜNCELLENDİ)")]
+    public AudioSource buttonSound; 
+    public AudioSource chipSound;   
+
+    [Header("Ekonomi (Wallet)")]
     [SerializeField] private TextMeshProUGUI walletText; 
     private int totalMoney = 10000; 
 
-    [Header("Bet UI")]
+    [Header("Bahis UI")]
     [SerializeField] private TextMeshProUGUI betAmountText; 
     [SerializeField] private GameObject betChipsPanel; 
     public Button dealButton; 
-    
-    
     [SerializeField] private GameObject clearButtonObj; 
 
-    [Header("Error UI")]
+    [Header("Uyarılar")]
     [SerializeField] private GameObject maxBetError; 
     [SerializeField] private GameObject zeroBetWarning; 
     [SerializeField] private GameObject notEnoughMoneyWarning; 
 
-    [Header("Game Text UI")]
+    [Header("Oyun Metinleri")]
     public TextMeshProUGUI playerScoreText; 
     public TextMeshProUGUI dealerScoreText; 
     public GameObject actionButtonsPanel; 
 
-    [Header("GameOver UI")]
+    [Header("Oyun Sonu")]
     [SerializeField] private TextMeshProUGUI resultText; 
     
     private int maxBetAmount = 1000; 
@@ -46,7 +47,20 @@ public class UIManager : MonoBehaviour
 
     void UpdateWalletUI()
     {
-        walletText.text = totalMoney.ToString();
+        if(walletText != null) walletText.text = totalMoney.ToString();
+    }
+    
+    public void PlayClickSound()
+    {
+        if (buttonSound != null) buttonSound.Play();
+    }
+    
+    public void PlayChipSound()
+    {
+        if (chipSound != null)
+        {
+            chipSound.PlayOneShot(chipSound.clip);
+        }
     }
     
     public void IncreaseBet(int amount)
@@ -75,19 +89,9 @@ public class UIManager : MonoBehaviour
         betAmountText.text = betAmount.ToString();
     }
 
-    public void DecreaseBet(int amount)
-    {
-        if(maxBetError) maxBetError.SetActive(false);
-        if(notEnoughMoneyWarning) notEnoughMoneyWarning.SetActive(false);
-
-        betAmount -= amount;
-        if (betAmount < 0) betAmount = 0;
-
-        betAmountText.text = betAmount.ToString();
-    }
-
     public void ClearBet()
     {
+        PlayClickSound();
         betAmount = 0;
         betAmountText.text = "0";
         
@@ -96,14 +100,16 @@ public class UIManager : MonoBehaviour
         if(zeroBetWarning) zeroBetWarning.SetActive(false);
     }
     
-    public void Bet1() => IncreaseBet(1);
-    public void Bet5() => IncreaseBet(5);
-    public void Bet10() => IncreaseBet(10);
-    public void Bet50() => IncreaseBet(50);
-    public void Bet100() => IncreaseBet(100);
-
+    public void Bet1() { PlayChipSound(); IncreaseBet(1); }
+    public void Bet5() { PlayChipSound(); IncreaseBet(5); }
+    public void Bet10() { PlayChipSound(); IncreaseBet(10); }
+    public void Bet50() { PlayChipSound(); IncreaseBet(50); }
+    public void Bet100() { PlayChipSound(); IncreaseBet(100); }
+    
     public void OnDealButtonPressed()
     {
+        PlayClickSound();
+
         if (betAmount <= 0)
         {
             if(zeroBetWarning) zeroBetWarning.SetActive(true);
@@ -115,10 +121,9 @@ public class UIManager : MonoBehaviour
         
         if(betChipsPanel) betChipsPanel.SetActive(false);
         if(actionButtonsPanel) actionButtonsPanel.SetActive(true);
-        
         if(clearButtonObj) clearButtonObj.SetActive(false);
 
-        dealButton.interactable = false; 
+        dealButton.gameObject.SetActive(false); 
         
         if(maxBetError) maxBetError.SetActive(false);
 
@@ -130,21 +135,21 @@ public class UIManager : MonoBehaviour
     
     public void OnHitButtonPressed()
     {
+        PlayClickSound();
         blackjackManager.PlayerHit();
     }
 
     public void OnStandButtonPressed()
     {
+        PlayClickSound();
         if(actionButtonsPanel) actionButtonsPanel.SetActive(false);
         blackjackManager.PlayerStand();
     }
 
     public void UpdateScoreUI(bool isPlayer, string scoreText)
     {
-        if (isPlayer)
-            playerScoreText.text = scoreText;
-        else
-            dealerScoreText.text = scoreText;
+        if (isPlayer) playerScoreText.text = scoreText;
+        else dealerScoreText.text = scoreText;
     }
     
     public void GameResult(bool playerWins, string message, bool isPush = false)
@@ -193,7 +198,7 @@ public class UIManager : MonoBehaviour
         
         if(clearButtonObj) clearButtonObj.SetActive(true);
 
-        dealButton.interactable = true; 
+        dealButton.gameObject.SetActive(true); 
         
         if(maxBetError) maxBetError.SetActive(false);
         if(zeroBetWarning) zeroBetWarning.SetActive(false);
@@ -203,22 +208,9 @@ public class UIManager : MonoBehaviour
         betAmountText.text = "0";
     }
 
-    public void PlayButton()
-    {
-        StartCoroutine(PlayWithDelay());
-    }
-    
-    IEnumerator PlayWithDelay()
-    {
-        animator.SetTrigger("PlayClick");
-        
-        yield return new WaitForSeconds(0.4f);
-        
-        SceneManager.LoadScene("GameScene");
-    }
-    
     public void MenuButton()
     {
+        PlayClickSound();
         SceneManager.LoadScene("MainMenu");
     }
 }
